@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom"
 import { StyledHeader, StyledLi, StyledMenu } from "./menu.styles"
 
-const Menu =({$visibleNav, NavSwitch})=>{
+const Menu =({$visibleNav, navSwitch})=>{
     return(
         <>
             
                 <StyledHeader>
                     <h2>THE PLANETS</h2>
                     <div>
-                        <img onClick={(NavSwitch)} src="./images/icon-hamburger.svg" alt="" /> 
+                        <img onClick={(navSwitch)} src="./images/icon-hamburger.svg" alt="" /> 
                     </div>
                      
                 </StyledHeader>
                
-                <StyledMenu onClick={NavSwitch} $visibleNav={$visibleNav}>
+                <StyledMenu onClick={navSwitch} $visibleNav={$visibleNav}>
                     <ul>
                         <StyledLi $color="#DEF4FC"><Link to="/">MERCURY</Link><img src="./images/icon-chevron.svg"  /></StyledLi>
           

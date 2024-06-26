@@ -11,14 +11,12 @@ const Container=({planet, $color, $width, $position})=>{
     if (!planet ) return
     
    
-    const NavSwitch =()=>{
-        setVisibleNav(prevPosition => !prevPosition);
-    } 
+  
 
     return(
         <>
             <div>
-                <Menu $visibleNav={visibleNav} NavSwitch={NavSwitch}/>
+                <Menu $visibleNav={visibleNav} navSwitch={()=>navSwitch(setVisibleNav)}/>
                 <Tabs activeTab={activeTab} setActiveTab={setActiveTab} $color={$color}/>
                 <div>
                     <StyledImgContainer>
@@ -62,4 +60,8 @@ const Container=({planet, $color, $width, $position})=>{
         </>
     )
 }
+
+const navSwitch =(setVisibleNav)=>{
+    setVisibleNav(prevPosition => !prevPosition);
+} 
 export default Container
